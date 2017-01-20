@@ -26,7 +26,7 @@ public class Deck extends ArrayList<Card>{
     public Card withdraw(int num){
         if(num>size()) num =size();
         return remove(num);
-    }s
+    }
     
     
 }
