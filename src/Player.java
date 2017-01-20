@@ -13,12 +13,22 @@ public class Player {
     private String name;
     private int coins = 0;
     private List<Cards> hand;    //手札
+    private int result = 0;
+    private int scard;
     
     /*コンストラクタ*/
     public Player(String name,int coins){
         this.name = name;
         this.coins = coins;
         hand = new ArrayList<>();
+    }
+    
+    public void setResult(int result){
+        this.result = result;
+    }
+    
+    public int getResult(){
+        return result;
     }
     
     public void setCoints(int num){
@@ -30,8 +40,9 @@ public class Player {
         coins -= num;
     }
     /*カードを捨てる*/
-    Cards drawOut(int index){
-        return hand.remove(index);
+    void drawOutIn(int index,List<Cards> deck){
+        hand.remove(index);
+        hand.add(index,deck.remove(0));
     }
     /*カードを引く(手札に加える)*/
     void drawIn(List<Cards> deck){
@@ -43,14 +54,13 @@ public class Player {
     }
 
     
-    public void ShowList(){
-        for(int i = 0;i < 5;i++){
-            (hand.get(i)).show();
-        }
+    public int ShowRank(int i){
+       return (hand.get(i)).ShowRank();
+        
     }
     
-    public String ShowSuit(){
-        return (hand.get(0)).SuitShow();
+    public String ShowSuit(int i){
+        return (hand.get(i)).ShowSuit();
     }
     
     

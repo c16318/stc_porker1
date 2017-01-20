@@ -53,11 +53,11 @@ public class Cards {
         return new ArrayList<Cards>(deck);
     }
     
-    public void show(){
-        System.out.println(suit + ":" + rank.id);
+    public int ShowRank(){
+        return rank.id;
     }
     
-    public String SuitShow(){
+    public String ShowSuit(){
         return suit.name();
     }
     
@@ -69,16 +69,5 @@ public class Cards {
         return suit.id;
     }
     
-    /*List<Card> cards;
-    
-    public Cards(){
-        cards = new ArrayList<>();
-        
-        for(int i = 1;i <= 4;i++){
-            for(int j = 1;j <= 13;j++){
-                cards.add(Card(i,j));
-            }
-        }
-    }
-    */
+
 }
