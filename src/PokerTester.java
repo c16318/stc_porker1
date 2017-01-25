@@ -73,15 +73,16 @@ public class PokerTester {
                 System.out.println(computer.ShowSuit(i) + ":" + computer.ShowRank(i));
          System.out.println();
          
-         
+         akiyama.sortCard();
+         computer.sortCard();
          akiyama.setResult(table.check(akiyama.hand()));
          computer.setResult(table.check(computer.hand()));
          
-         akiyama.sortCard();
+         
         // System.out.println(table.string(akiyama.getResult()));
          
          
-        System.out.println("player:" + akiyama.getResult() + "   com:" + computer.getResult());
+        System.out.println("player:" + table.string(akiyama.getResult()) + "   com:" + table.string(computer.getResult()));
         
         
         if(akiyama.getResult() < computer.getResult())
