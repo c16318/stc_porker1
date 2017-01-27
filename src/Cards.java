@@ -55,6 +55,7 @@ public class Cards {
         
     }
     
+    /*"deck"の値を初期化*/
     static void resetdeck(){
         deck.clear();
         for(Suit suit: Suit.values()){

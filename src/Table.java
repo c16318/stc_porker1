@@ -13,21 +13,24 @@ public class Table {
         result = 0;
     }
     
-    
+    /*役の名前を返す*/
     String string(int i){
         String[] y ={"ロイヤルストレートフラッシュ","ストレートフラッシュ","4カード","フルハウス","フラッシュ","ストレート","3カード","2ペア","1ペア","役ナシ"};
         
         return y[i];
     }
     
+    /*コインをセット*/
     public void setCoin(int coin){
         this.coin += coin;
     }
     
+    /*"coin"の値を返す*/
     public int getCoin(){
         return coin;
     }
     
+    /*コインの値をリセットする*/
     public void resetCoin(){
         coin = 0;
     }

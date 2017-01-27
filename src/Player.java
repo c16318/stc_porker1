@@ -23,18 +23,21 @@ public class Player {
         hand = new ArrayList<>();
     }
     
+    /*"hand"の中身を初期化*/
     public void clear(){
         hand.clear();
     } 
     
+    /*結果の値をセット*/
     public void setResult(int result){
         this.result = result;
     }
     
+    /*結果の値を返す*/
     public int getResult(){
         return result;
     }
-    
+    /*"coins"に"num"の値を加算*/
     public void setCoints(int num){
         this.coins += num;
     }
@@ -45,10 +48,11 @@ public class Player {
         return num;
     }
     
+    /*"coins"の値を返す*/
     public int getCoin(){
         return coins;
     }
-    
+    /*"name"な値を返す*/
     public String getName(){
         return name;
     }
