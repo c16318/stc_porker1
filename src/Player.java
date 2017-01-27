@@ -32,13 +32,24 @@ public class Player {
     }
     
     public void setCoints(int num){
-        this.coins = num;
+        this.coins += num;
     }
     
-    /*コインをかける*/
-    public void bet(int num){
+        /*コインをかける*/
+    public int  bet(int num){
         coins -= num;
+        return num;
     }
+    
+    public int getCoin(){
+        return coins;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+
     /*カードを捨てる*/
     void drawOutIn(int index,List<Cards> deck){
         hand.remove(index);

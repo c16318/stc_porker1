@@ -5,7 +5,14 @@ import java.util.List;
 
 public class Table {
     
-    int result = 0;
+    
+    private int result;
+    static int coin = 0;
+    
+    public Table(){
+        result = 0;
+    }
+    
     
     String string(int i){
         String[] y ={"ロイヤルストレートフラッシュ","ストレートフラッシュ","4カード","フルハウス","フラッシュ","ストレート","3カード","2ペア","1ペア","役ナシ"};
@@ -13,8 +20,20 @@ public class Table {
         return y[i];
     }
     
+    public void setCoin(int coin){
+        this.coin += coin;
+    }
+    
+    public int getCoin(){
+        return coin;
+    }
+    
+    public void reSetCoin(){
+        coin = 0;
+    }
+    
     /*役の判定*/
-    public int check(List<Cards> card){
+    public  int check(List<Cards> card){
         
         
         int straight  = checkStraight(card);
@@ -196,6 +215,6 @@ public class Table {
         
     }
     
-
+    
     
 }
