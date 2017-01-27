@@ -28,7 +28,7 @@ public class Table {
         return coin;
     }
     
-    public void reSetCoin(){
+    public void resetCoin(){
         coin = 0;
     }
     

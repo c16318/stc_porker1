@@ -8,6 +8,7 @@ import java.util.List;
  * @author c16318
  */
 public class Cards {
+    
     public enum Suit{
         Diamond(0),Spade(1),Clover(2),Heart(3);
         private int id;
@@ -41,7 +42,21 @@ public class Cards {
     }
     
     
+    
     static {
+        for(Suit suit: Suit.values()){
+            for(Rank rank: Rank.values()){
+                deck.add(new Cards(suit,rank));
+            }
+        }
+    }
+    
+    public void reset(){
+        
+    }
+    
+    static void resetdeck(){
+        deck.clear();
         for(Suit suit: Suit.values()){
             for(Rank rank: Rank.values()){
                 deck.add(new Cards(suit,rank));

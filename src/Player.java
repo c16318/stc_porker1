@@ -23,6 +23,10 @@ public class Player {
         hand = new ArrayList<>();
     }
     
+    public void clear(){
+        hand.clear();
+    } 
+    
     public void setResult(int result){
         this.result = result;
     }
