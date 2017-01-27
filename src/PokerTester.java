@@ -42,9 +42,13 @@ public class PokerTester {
          //for(int i = 0;i < 5;i++)
             //System.out.println(computer.ShowSuit(i) + ":" + computer.ShowRank(i));
          
+        /*カードを交換するか*/
          int ch = 1;
+         /*何枚目のカードを交換するか*/
          int chenge = 0;
-         int retry= 0; 
+         /*もう一度するか*/
+         int retry= 0;
+         /*何枚コインをかけるか*/
          int betcoin = 0;
          
          do{
@@ -71,12 +75,7 @@ public class PokerTester {
 
                 /*"change"番目のカードを捨て、山札からカードを１枚引く*/
                 akiyama.drawOutIn(chenge - 1,cards);
-                //akiyama.drawIn(cards);
 
-               /*for(int i = 0;i < 5;i++)
-                   System.out.println(akiyama.ShowSuit(i) + ":" + akiyama.ShowRank(i));
-                System.out.println();
-                */
 
             }while(ch != 0);
 
@@ -141,9 +140,7 @@ public class PokerTester {
         }while(retry == 1);
       
         
-       System.out.println("player:"+akiyama.getCoin() + "   computer:" + computer.getCoin());
-        
-        
+       System.out.println("player(coin):"+akiyama.getCoin() + "   computer(coin):" + computer.getCoin());
         
     }
 }
